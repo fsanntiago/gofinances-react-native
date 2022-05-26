@@ -2,12 +2,13 @@ import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { useTheme } from "styled-components";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { PropsTabNavigation } from "./navigation";
 
 import { Dashboard } from "../screens/Dashboard";
 import { Register } from "../screens/Register";
 import { Platform } from "react-native";
 
-const { Navigator, Screen } = createBottomTabNavigator();
+const { Navigator, Screen } = createBottomTabNavigator<PropsTabNavigation>();
 
 export function AppRoutes() {
   const theme = useTheme();
