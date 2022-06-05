@@ -19,7 +19,7 @@ import { CatogorySelect } from "../CategorySelect";
 import { PropsTab } from "../../routes/navigation";
 
 import {
-  Conteiner,
+  Container,
   Header,
   Title,
   Form,
@@ -130,7 +130,7 @@ export function Register() {
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <Conteiner>
+      <Container>
         <Header>
           <Title>Cadastro</Title>
         </Header>
@@ -191,7 +191,7 @@ export function Register() {
             onPress={handleCloseAlert}
           />
         </Modal>
-      </Conteiner>
+      </Container>
     </TouchableWithoutFeedback>
   );
 }
