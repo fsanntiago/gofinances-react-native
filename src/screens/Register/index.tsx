@@ -30,8 +30,7 @@ import {
 } from "./styles";
 
 interface FormData {
-  name: string;
-  amount: string;
+  [name: string]: string;
 }
 
 const schema = Yup.object().shape({
