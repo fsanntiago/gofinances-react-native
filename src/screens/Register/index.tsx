@@ -6,7 +6,11 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import uuid from "react-native-uuid";
 
 import { useForm } from "react-hook-form";
-import { useNavigation } from "@react-navigation/native";
+import {
+  NavigationProp,
+  ParamListBase,
+  useNavigation
+} from "@react-navigation/native";
 
 import { Button } from "../../components/Form/Button";
 import { TransactionTypeButton } from "../../components/Form/TransactionTypeButton";
@@ -16,8 +20,6 @@ import { CustomAlert } from "../../components/CustomAlert";
 
 import { CatogorySelect } from "../CategorySelect";
 
-import { PropsTab } from "../../routes/navigation";
-
 import {
   Container,
   Header,
@@ -26,7 +28,6 @@ import {
   Fields,
   TransactionTypes
 } from "./styles";
-import { number } from "yup/lib/locale";
 
 interface FormData {
   name: string;
@@ -55,7 +56,7 @@ export function Register() {
     name: "Categoria"
   });
 
-  const navigation = useNavigation<PropsTab>();
+  const navigation: NavigationProp<ParamListBase> = useNavigation();
 
   const {
     control,
