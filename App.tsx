@@ -23,7 +23,7 @@ import theme from "./src/global/styles/theme";
 
 LogBox.ignoreLogs(["EventEmitter.removeListener"]);
 
-import { AuthProvider } from "./src/hooks/auth";
+import { AuthProvider, useAuth } from "./src/hooks/auth";
 
 export default function App() {
   SplashScreen.preventAutoHideAsync();
@@ -34,7 +34,9 @@ export default function App() {
     Poppins_700Bold
   });
 
-  if (!fontsLoaded) {
+  const { userStorageLoading } = useAuth();
+
+  if (!fontsLoaded || userStorageLoading) {
     return null;
   }
 
