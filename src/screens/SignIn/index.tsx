@@ -26,7 +26,6 @@ export function SignIn() {
   async function handleSignInWithGoogle() {
     try {
       await signInWithGoogle();
-      console.log(user);
     } catch (error) {
       console.log(error);
       Alert.alert("Não foi possivel conectar a conta Google");
@@ -36,7 +35,6 @@ export function SignIn() {
   async function handleSignInWithApple() {
     try {
       await signInWithApple();
-      console.log(user);
     } catch (error) {
       console.log(error);
       Alert.alert("Não foi possivel conectar a conta Apple");
