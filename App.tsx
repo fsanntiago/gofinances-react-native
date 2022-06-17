@@ -6,6 +6,7 @@ import React from "react";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { ThemeProvider } from "styled-components";
+import { LogBox } from "react-native";
 
 import {
   useFonts,
@@ -15,6 +16,8 @@ import {
 } from "@expo-google-fonts/poppins";
 
 import theme from "./src/global/styles/theme";
+
+LogBox.ignoreLogs(["EventEmitter.removeListener"]);
 
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
